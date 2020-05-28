@@ -4,8 +4,11 @@
     <string name="buttonRegistrieren">Registrieren</string>
     <string name="buttonHochladen">Hochladen</string>
     <string name="buttonZuRegistrieren">Kein Account? \n hier registrieren</string>
+    <string name="buttonUeberspringen">Überspringen</string>
     <string name="editTextEmail">Email</string>
     <string name="editTextPassword">Passwort</string>
-
+    <string name="pictureAltText">Profile Picture</string>
+    <string name="fotoHochladen">Foto Hochladen</string>
+    <string name="willkommen">Herzlich Willkommen, Vorname Nachname!</string>
 
 </resources>
