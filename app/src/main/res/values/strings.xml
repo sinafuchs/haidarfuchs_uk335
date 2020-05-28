@@ -4,5 +4,8 @@
     <string name="buttonRegistrieren">Registrieren</string>
     <string name="buttonHochladen">Hochladen</string>
     <string name="buttonZuRegistrieren">Kein Account? \n hier registrieren</string>
+    <string name="editTextEmail">Email</string>
+    <string name="editTextPassword">Passwort</string>
+
 
 </resources>
