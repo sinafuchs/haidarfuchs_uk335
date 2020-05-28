@@ -4,15 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/greyColor"
     tools:context=".MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/buttonLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/blueColor"
+        android:text="@string/buttonLogin"
+        android:textColor="@color/whiteColor"
+        app:layout_constraintBottom_toTopOf="@+id/buttonZuRegistrieren"
+        app:layout_constraintStart_toStartOf="@+id/buttonZuRegistrieren" />
 
+    <Button
+        android:id="@+id/buttonZuRegistrieren"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="69dp"
+        android:background="@color/greyColor"
+        android:shadowColor="@color/greyColor"
+        android:text="@string/buttonZuRegistrieren"
+        android:textColor="@color/blueColor"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

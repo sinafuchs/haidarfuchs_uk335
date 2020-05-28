@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">AppSinaAmin</string>
+    <string name="app_name">Noa Login</string>
+    <string name="buttonLogin">Login</string>
+    <string name="buttonRegistrieren">Registrieren</string>
+    <string name="buttonHochladen">Hochladen</string>
+    <string name="buttonZuRegistrieren">Kein Account? \n hier registrieren</string>
+
 </resources>
