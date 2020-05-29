@@ -15,8 +15,15 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>
+
         <activity android:name=".RegistrierenActivity">
         </activity>
-    </application>
 
+        <activity android:name=".LoggedinActivity">
+        </activity>
+
+        <activity android:name=".FotohochladenActivity">
+        </activity>
+
+    </application>
 </manifest>

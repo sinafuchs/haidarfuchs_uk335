@@ -17,6 +17,7 @@
         android:layout_marginEnd="162dp"
         android:layout_marginRight="162dp"
         android:background="@color/blueColor"
+        android:onClick="goToLogedin"
         android:text="@string/buttonLogin"
         android:textColor="@color/whiteColor"
         app:layout_constraintEnd_toEndOf="parent"
