@@ -1,4 +1,4 @@
-package com.sixgroup.appsinaamin;
+package com.sixgroup.appsinaamin.activitys;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.sixgroup.appsinaamin.R;
 
 public class PictureActivity extends AppCompatActivity {
     // Define the pic id
