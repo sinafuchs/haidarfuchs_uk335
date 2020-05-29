@@ -9,26 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".PictureActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name=".activitys.MainActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+
+        <activity android:name=".activitys.RegistrierenActivity">
         </activity>
 
-        <activity android:name=".RegistrierenActivity">
+        <activity android:name=".activitys.LoggedinActivity">
         </activity>
 
-        <activity android:name=".LoggedinActivity">
-        </activity>
-
-        <activity android:name=".FotohochladenActivity">
+        <activity android:name=".activitys.FotohochladenActivity">
         </activity>
 
     </application>
