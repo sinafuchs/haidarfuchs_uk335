@@ -5,7 +5,8 @@
     <string name="buttonHochladen">Hochladen</string>
     <string name="textViewZuRegistrieren"> Kein Account? \n hier registrieren</string>
     <string name="editTextEmail">Email</string>
-    <string name="editTextPassword">Passwort</string><string name="editTextPasswordBestaetigen">Passwort bestätigen</string>
+    <string name="editTextPassword">Passwort</string>
+    <string name="editTextPasswordBestaetigen">Passwort bestätigen</string>
     <string name="textViewRegistrierem">Registrieren</string>
     <string name="editTextVorname">Vorname</string>
     <string name="editTextNachname">Nachname</string>

@@ -8,8 +8,6 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView textViewZuRegistrieren = findViewById(R.id.textViewzuRegistrieren);
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
