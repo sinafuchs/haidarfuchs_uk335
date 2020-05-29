@@ -8,6 +8,7 @@ import com.sixgroup.appsinaamin.R;
 
 public class LoggedinActivity extends AppCompatActivity {
 
+    //creates activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -10,6 +10,7 @@ import com.sixgroup.appsinaamin.persistence.UserDao;
 
 public class MainActivity extends AppCompatActivity {
 
+    //creates activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,11 +19,13 @@ public class MainActivity extends AppCompatActivity {
        UserDao userDao = AppDatabase.getAppDb(getApplicationContext()).getUserDao();
     }
 
+    //changes activity to "activity_registrieren"
     public void goToRegistrieren (View view){
         Intent intent = new Intent (this, RegistrierenActivity.class);
         startActivity(intent);
     }
 
+    //changes activity to "activity_logedin"
     public void goToLogedin (View view){
         Intent intent = new Intent (this, LoggedinActivity.class);
         startActivity(intent);
