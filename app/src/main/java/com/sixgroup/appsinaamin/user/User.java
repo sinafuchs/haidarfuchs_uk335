@@ -1,6 +1,5 @@
 package com.sixgroup.appsinaamin.user;
 
-
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -20,13 +19,21 @@ public class User {
     @ColumnInfo(name="lastname")
     private String nachname;
 
-
     private String email;
+
+    private byte[] image;
 
     //passwort is called password in the database
     @ColumnInfo(name="password")
     private String passwort;
 
+    public User(String vorname, String nachname, String email, String passwort, byte[] image) {
+        this.vorname = vorname;
+        this.nachname = nachname;
+        this.email = email;
+        this.passwort = passwort;
+        this.image = image;
+    }
 
     //getters and setters
     public int getId() {

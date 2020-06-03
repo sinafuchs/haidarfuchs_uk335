@@ -8,15 +8,21 @@ import com.sixgroup.appsinaamin.R;
 import com.sixgroup.appsinaamin.persistence.AppDatabase;
 import com.sixgroup.appsinaamin.persistence.UserDao;
 
+//Class that opens first activity, which is the Login
 public class MainActivity extends AppCompatActivity {
 
-    //creates activity
+    //Database connection
+    public static UserDao userDao;
+
+    //creates activity and shows the Login to the User
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       UserDao userDao = AppDatabase.getAppDb(getApplicationContext()).getUserDao();
+        userDao = AppDatabase.getAppDb(this).getUserDao();
+
+
     }
 
     //changes activity to "activity_registrieren"
