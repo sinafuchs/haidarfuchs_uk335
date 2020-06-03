@@ -11,7 +11,7 @@ public interface UserDao {
 
     //writing query for getting specific user
     @Query("SELECT * FROM user WHERE email = :email LIMIT 1")
-    User findByName(String email);
+    User getByEmail(String email);
 
     //writing query for inserting all users
     @Insert

@@ -75,4 +75,12 @@ public class User {
     public void setPasswort(String passwort) {
         this.passwort = passwort;
     }
+
+    public byte[] getImage() {
+        return image;
+    }
+
+    public void setImage(byte[] image) {
+        this.image = image;
+    }
 }

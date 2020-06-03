@@ -61,8 +61,8 @@ public class FotohochladenActivity extends AppCompatActivity {
 
     public void goToLoggedin (View view){
         Intent intent = new Intent (this, LoggedinActivity.class);
-        startActivity(intent);
         saveToDatabase(intent);
+        startActivity(intent);
     }
 
     // This method will help to retrieve the image
