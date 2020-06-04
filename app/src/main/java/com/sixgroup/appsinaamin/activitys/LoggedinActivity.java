@@ -1,5 +1,6 @@
 package com.sixgroup.appsinaamin.activitys;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,10 +25,10 @@ public class LoggedinActivity extends AppCompatActivity {
         //set Dao
         userDao = AppDatabase.getAppDb(this.getApplicationContext()).getUserDao();
 
-        String email = getString(R.string.editTextEmail);
+        Intent intent = getIntent();
+        String email = intent.getStringExtra(getString(R.string.editTextEmail));
         User user = userDao.getByEmail(email);
-
-        String testTHisName = user.getNachname();
+        
         textViewVornameLoggedin.setText(user.getVorname());
         textViewNachnameLoggedin.setText(user.getNachname());
     }
