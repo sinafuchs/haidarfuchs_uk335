@@ -7,14 +7,12 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.sixgroup.appsinaamin.R;
 import com.sixgroup.appsinaamin.persistence.AppDatabase;
 import com.sixgroup.appsinaamin.persistence.UserDao;
 import com.sixgroup.appsinaamin.user.User;
-
 import java.io.ByteArrayOutputStream;
 
 //Class that opens the activity in which you can upload photos
