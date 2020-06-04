@@ -3,9 +3,9 @@ package com.sixgroup.appsinaamin.activitys;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.sixgroup.appsinaamin.R;
 
 public class RegistrierenActivity extends AppCompatActivity {
@@ -20,6 +20,7 @@ public class RegistrierenActivity extends AppCompatActivity {
     //changes activity to "a"ctivity_fotohochladen"
     public void goToFotohochladen (View view){
         Intent intent = new Intent (this, FotohochladenActivity.class);
+        getData(intent);
         startActivity(intent);
     }
 
@@ -27,6 +28,19 @@ public class RegistrierenActivity extends AppCompatActivity {
     public void goToLogin (View view){
         Intent intent = new Intent (this, MainActivity.class);
         startActivity(intent);
+    }
+
+    public void getData (Intent intent) {
+        EditText firstName = findViewById(R.id.editTextVorname);
+        EditText lastName = findViewById(R.id.editTextNachname);
+        EditText email = findViewById(R.id.editTextEmailRegistrieren);
+        EditText password = findViewById(R.id.editTextPasswortRegistrieren);
+        EditText passwordConfirm = findViewById(R.id.editTextPasswortBestaetigen);
+
+        intent.putExtra(getString(R.string.vorname), firstName.getText().toString());
+        intent.putExtra(getString(R.string.nachname), lastName.getText().toString());
+        intent.putExtra(getString(R.string.editTextEmail), email.getText().toString());
+        intent.putExtra(getString(R.string.editTextPassword), password.getText().toString());
     }
 
 }

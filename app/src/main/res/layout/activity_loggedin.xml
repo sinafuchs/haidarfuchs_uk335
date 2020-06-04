@@ -7,40 +7,58 @@
 
     <TextView
         android:id="@+id/willkommen"
-        android:layout_width="359dp"
+        android:layout_width="0dp"
         android:layout_height="61dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
         android:text="@string/willkommen"
         android:textColor="#000000"
         android:textSize="36sp"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="94dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="191dp"
         android:layout_height="178dp"
         android:contentDescription="@string/pictureAltText"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="273dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/textViewVornamelogedin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
         android:text="@string/vorname"
         android:textColor="@color/blackColor"
         android:textSize="30sp"
-        tools:layout_editor_absoluteX="132dp"
-        tools:layout_editor_absoluteY="164dp" />
+        app:layout_constraintEnd_toStartOf="@+id/textViewNachnamelogedin"
+        app:layout_constraintTop_toBottomOf="@+id/willkommen" />
 
     <TextView
         android:id="@+id/textViewNachnamelogedin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginLeft="104dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="103dp"
+        android:layout_marginRight="103dp"
         android:text="@string/nachname"
         android:textColor="@color/blackColor"
         android:textSize="30sp"
-        tools:layout_editor_absoluteX="214dp"
-        tools:layout_editor_absoluteY="164dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/willkommen" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,6 +14,6 @@ public interface UserDao {
     User getByEmail(String email);
 
     //writing query for inserting all users
-    @Insert
-    void insertUser(User user);
+    @Query("INSERT INTO user (firstname, lastname, email, password, image) VALUES (:firstName, :lastName, :email, :password, :img)")
+    void insertUser(String firstName, String lastName, String email, String password, byte[] img);
 }

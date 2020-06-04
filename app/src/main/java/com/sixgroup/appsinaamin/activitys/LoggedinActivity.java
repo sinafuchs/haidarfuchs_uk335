@@ -20,7 +20,7 @@ public class LoggedinActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loggedin);
 
-        String email = getIntent().getStringExtra("EMAIL");
+        String email = getString(R.string.editTextEmail);
         User user = userDao.getByEmail(email);
 
         textViewVornameLoggedin.setText(user.getVorname());
