@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.sixgroup.appsinaamin.R;
+import com.sixgroup.appsinaamin.persistence.AppDatabase;
 import com.sixgroup.appsinaamin.persistence.UserDao;
 import com.sixgroup.appsinaamin.user.User;
 
@@ -34,6 +35,9 @@ public class FotohochladenActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fotohochladen);
+
+        //set Dao
+        userDao = AppDatabase.getAppDb(this.getApplicationContext()).getUserDao();
 
         // By ID we can get each component
         // which id is assigned in XML file
