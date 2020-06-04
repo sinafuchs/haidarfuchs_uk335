@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+
 import com.sixgroup.appsinaamin.R;
 import com.sixgroup.appsinaamin.persistence.AppDatabase;
 import com.sixgroup.appsinaamin.persistence.UserDao;
+import com.sixgroup.appsinaamin.user.User;
 
 //Class that opens first activity, which is the Login
 public class MainActivity extends AppCompatActivity {
@@ -30,8 +33,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //changes activity to "activity_logedin"
-    public void goToLogedin (View view){
+    public void goToLogedin (){
         Intent intent = new Intent (this, LoggedinActivity.class);
         startActivity(intent);
+    }
+
+    public void login(View view) {
+        EditText emailEdit = findViewById(R.id.editTextEmail);
+        EditText passwordEdit = findViewById(R.id.editTextPasswort);
+
+        String password = passwordEdit.getText().toString();
+        User user = userDao.getByEmail(emailEdit.getText().toString());
+        if(user != null) {
+            if (("" + password.hashCode()).equals(user.getPasswort())) {
+                goToLogedin();
+            }
+        }
     }
 }

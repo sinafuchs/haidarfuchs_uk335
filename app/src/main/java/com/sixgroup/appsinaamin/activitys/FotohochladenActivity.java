@@ -1,10 +1,12 @@
 package com.sixgroup.appsinaamin.activitys;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -101,6 +103,10 @@ public class FotohochladenActivity extends AppCompatActivity {
         byte[] img = bos.toByteArray();
         intent.putExtra(getString(R.string.editTextEmail), email);
 
-        userDao.insertUser(new User(firstName, lastName, email, password, img));
+            userDao.insertUser(new User(firstName, lastName, email, password, img));
+
+
     }
+
+
 }

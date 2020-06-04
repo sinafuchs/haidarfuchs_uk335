@@ -7,7 +7,7 @@
     android:background="@color/greyColor">
 
     <Button
-        android:id="@+id/buttonLogin2"
+        android:id="@+id/buttonRegistrieren"
         android:layout_width="107dp"
         android:layout_height="0dp"
         android:layout_marginTop="17dp"
@@ -33,7 +33,7 @@
         android:textColor="@color/blueColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonLogin2" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonRegistrieren" />
 
     <TextView
         android:id="@+id/textViewRegistrieren"
@@ -103,7 +103,7 @@
         android:ems="10"
         android:hint="@string/editTextPasswordBestaetigen"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/buttonLogin2"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRegistrieren"
         app:layout_constraintStart_toStartOf="@+id/editTextPasswortRegistrieren"
         app:layout_constraintTop_toBottomOf="@+id/editTextPasswortRegistrieren" />
 
