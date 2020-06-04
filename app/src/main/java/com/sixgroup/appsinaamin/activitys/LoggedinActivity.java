@@ -27,6 +27,7 @@ public class LoggedinActivity extends AppCompatActivity {
         String email = getString(R.string.editTextEmail);
         User user = userDao.getByEmail(email);
 
+        String testTHisName = user.getNachname();
         textViewVornameLoggedin.setText(user.getVorname());
         textViewNachnameLoggedin.setText(user.getNachname());
     }

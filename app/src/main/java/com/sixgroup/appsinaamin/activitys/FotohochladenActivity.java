@@ -90,10 +90,10 @@ public class FotohochladenActivity extends AppCompatActivity {
     //saves data into database with no image
     public void saveToDatabase(Intent intent) {
 
-        String firstName = getString(R.string.vorname);
-        String lastName = getString(R.string.nachname);
-        String email = getString(R.string.editTextEmail);
-        String password = getString(R.string.editTextPassword);
+        String firstName = getIntent().getStringExtra(getString(R.string.editTextVorname));
+        String lastName = getIntent().getStringExtra(getString(R.string.editTextNachname));
+        String email = getIntent().getStringExtra(getString(R.string.editTextEmail));
+        String password = getIntent().getStringExtra(getString(R.string.editTextPassword));
 
         ImageView image = findViewById(R.id.profilePic);
         Bitmap imageBitmap = ((BitmapDrawable) image.getDrawable()).getBitmap();
@@ -103,6 +103,6 @@ public class FotohochladenActivity extends AppCompatActivity {
         byte[] img = bos.toByteArray();
         intent.putExtra(getString(R.string.editTextEmail), email);
 
-        userDao.insertUser(firstName, lastName, email, password, img);
+        userDao.insertUser(new User(firstName, lastName, email, password, img));
     }
 }

@@ -16,8 +16,8 @@
     <string name="editTextVorname">Vorname</string>
     <string name="editTextNachname">Nachname</string>
     <string name="textViewZuLogin"> Du hast ein Konto? \n Melde dich an</string>
-    <string name="vorname">Max</string>
-    <string name="nachname">muster</string>
+    <string name="vorname"></string>
+    <string name="nachname"></string>
 
 
 </resources>

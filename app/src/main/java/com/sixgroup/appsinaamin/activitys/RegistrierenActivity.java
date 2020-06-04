@@ -37,8 +37,8 @@ public class RegistrierenActivity extends AppCompatActivity {
         EditText password = findViewById(R.id.editTextPasswortRegistrieren);
         EditText passwordConfirm = findViewById(R.id.editTextPasswortBestaetigen);
 
-        intent.putExtra(getString(R.string.vorname), firstName.getText().toString());
-        intent.putExtra(getString(R.string.nachname), lastName.getText().toString());
+        intent.putExtra(getString(R.string.editTextVorname), firstName.getText().toString());
+        intent.putExtra(getString(R.string.editTextNachname), lastName.getText().toString());
         intent.putExtra(getString(R.string.editTextEmail), email.getText().toString());
         intent.putExtra(getString(R.string.editTextPassword), password.getText().toString());
     }

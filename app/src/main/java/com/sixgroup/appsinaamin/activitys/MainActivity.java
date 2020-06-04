@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        userDao = AppDatabase.getAppDb(this).getUserDao();
+        userDao = AppDatabase.getAppDb(this.getApplicationContext()).getUserDao();
     }
 
     //changes activity to "activity_registrieren"
