@@ -6,7 +6,6 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.sixgroup.appsinaamin.R;
@@ -16,7 +15,7 @@ import com.sixgroup.appsinaamin.user.User;
 import java.io.ByteArrayOutputStream;
 
 //Class that opens the activity in which you can upload photos
-public class FotohochladenActivity extends AppCompatActivity {
+public class UploadPictureActivity extends AppCompatActivity {
 
     // Define the pic id
     private static final int pic_id = 123;
@@ -25,14 +24,13 @@ public class FotohochladenActivity extends AppCompatActivity {
     private UserDao userDao;
 
     // Define the button and imageview type variable
-    Button camera_open_id;
     ImageView click_image_id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fotohochladen);
+        setContentView(R.layout.activity_uploadpicture);
 
         //set Dao
         userDao = AppDatabase.getAppDb(this.getApplicationContext()).getUserDao();
@@ -50,38 +48,29 @@ public class FotohochladenActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                // Create the camera_intent ACTION_IMAGE_CAPTURE
-                // it will open the camera for capture the image
-                Intent camera_intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+                    startActivityForResult(takePictureIntent, pic_id);
+                }
 
-                // Start the activity with camera_intent,
-                // and request pic id
-                startActivityForResult(camera_intent, pic_id);
             }
         });
     }
 
-    public void goToLoggedin (View view){
-        Intent intent = new Intent (this, LoggedinActivity.class);
+    public void goToWelcomeActivity(View view){
+        Intent intent = new Intent (this, WelcomeActivity.class);
         saveToDatabase(intent);
         startActivity(intent);
     }
 
     // This method will help to retrieve the image
-    protected void onActivityResult(int requestCode,
-                                    int resultCode,
-                                    Intent data) {
-
-        // Match the request 'pic id with requestCode
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == pic_id) {
-
-            // BitMap is data structure of image file
-            // which stor the image in memory
-            Bitmap photo = (Bitmap) data.getExtras().get("data");
-
-            // Set the image in imageview for display
-            click_image_id.setImageBitmap(photo);
+        if (requestCode == pic_id && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            click_image_id.setImageBitmap(imageBitmap);
         }
     }
 
