@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-
 import com.sixgroup.appsinaamin.R;
 import com.sixgroup.appsinaamin.persistence.AppDatabase;
 import com.sixgroup.appsinaamin.persistence.UserDao;
@@ -32,21 +31,23 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    //changes activity to "activity_logedin"
-    public void goToLogedin (){
+    //changes activity to "activity_loggedin"
+    public void goToLoggedin(){
         Intent intent = new Intent (this, LoggedinActivity.class);
         startActivity(intent);
     }
 
+    //Logs the User in
     public void login(View view) {
         EditText emailEdit = findViewById(R.id.editTextEmail);
         EditText passwordEdit = findViewById(R.id.editTextPasswort);
 
+        //looks if the entered password and email is the same as the one in the database
         String password = passwordEdit.getText().toString();
         User user = userDao.getByEmail(emailEdit.getText().toString());
         if(user != null) {
             if (("" + password.hashCode()).equals(user.getPasswort())) {
-                goToLogedin();
+                goToLoggedin();
             }
         }
     }

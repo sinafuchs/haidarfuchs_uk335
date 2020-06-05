@@ -27,6 +27,7 @@ public class User {
     @ColumnInfo(name="password")
     private String passwort;
 
+    //constructor
     public User(String vorname, String nachname, String email, String passwort, byte[] image) {
         this.vorname = vorname;
         this.nachname = nachname;

@@ -18,6 +18,6 @@
     <string name="textViewZuLogin"> Du hast ein Konto? \n Melde dich an</string>
     <string name="vorname"></string>
     <string name="nachname"></string>
-
+    <string name="buttonLogout">Logout</string>
 
 </resources>

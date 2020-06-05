@@ -6,7 +6,8 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import com.sixgroup.appsinaamin.user.User;
 
-@Database(entities = {User.class}, version = 2)
+//class that generates Database
+@Database(entities = {User.class}, version = 2, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
     //creating a Database

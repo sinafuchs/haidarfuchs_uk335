@@ -9,19 +9,21 @@
     <TextView
         android:id="@+id/willkommen"
         android:layout_width="0dp"
-        android:layout_height="61dp"
+        android:layout_height="0dp"
         android:layout_marginStart="26dp"
         android:layout_marginLeft="26dp"
         android:layout_marginTop="96dp"
         android:layout_marginEnd="26dp"
         android:layout_marginRight="26dp"
+        android:layout_marginBottom="574dp"
         android:text="@string/willkommen"
         android:textColor="#000000"
         android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonLogout" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -62,4 +64,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/willkommen" />
+
+    <Button
+        android:id="@+id/buttonLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="18dp"
+        android:background="@color/blueColor"
+        android:onClick="goToLogin"
+        android:text="@string/buttonLogout"
+        android:textColor="@color/blackColor"
+        app:layout_constraintBottom_toTopOf="@+id/willkommen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
